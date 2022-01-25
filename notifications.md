@@ -10,6 +10,10 @@ Add the composer package:
 composer require headlesslaravel/notifications
 ```
 
+```php
+Route::notifications();
+```
+
 Call the Laravel command to add a migration.
 ```
 php artisan notifications:table
