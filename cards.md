@@ -1,4 +1,4 @@
-# Headless Cards
+# Cards
 
 The card component class for dashboards and such.
 
