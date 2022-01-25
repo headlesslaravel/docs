@@ -1,4 +1,4 @@
-### Overview
+# Formations
 
 Formations combine Laravel features to form functioning API endpoints.
 
@@ -6,16 +6,10 @@ The index endpoint comes with [search, sort & filters](https://github.com/headle
 
 Response modes include Inertia, Blade or JSON.
 
-### Install
-
-Add to a Laravel 8+ / PHP 8+ project using composer:
-```
-composer require headlesslaravel/formations
-```
-Publish assets (config etc)
-```
-php artisan vendor:publish --provider="HeadlessLaravel\Formations\FormationProvider"
-```
+- Routes
+- Filters
+- Global Search
+- Imports
 
 ### Usage
 
