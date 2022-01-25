@@ -6,10 +6,21 @@ The index endpoint comes with [search, sort & filters](https://github.com/headle
 
 Response modes include Inertia, Blade or JSON.
 
-- Routes
-- Filters
-- Global Search
-- Imports
+- [Routes](https://github.com/headlesslaravel/docs/blob/main/formations.md#routes)
+    - [Resource](https://github.com/headlesslaravel/docs/blob/main/formations.md#resource-routes)
+    - [Nested Resource](https://github.com/headlesslaravel/docs/blob/main/formations.md#nested-resource-routes)
+    - [Pivot](https://github.com/headlesslaravel/docs/blob/main/formations.md#pivot-resource-routes)
+- [Filters](https://github.com/headlesslaravel/docs/blob/main/formations.md#filters)
+    - [Search](https://github.com/headlesslaravel/docs/blob/main/formations.md#search)
+    - [Sort](https://github.com/headlesslaravel/docs/blob/main/formations.md#sort)
+    - [General Filters](https://github.com/headlesslaravel/docs/blob/main/formations.md#general-filters)
+    - [Relationship Filters](https://github.com/headlesslaravel/docs/blob/main/formations.md#relationship-filters)
+    - [Location Filters](https://github.com/headlesslaravel/docs/blob/main/formations.md#location-filters)
+    - [Scope Filters](https://github.com/headlesslaravel/docs/blob/main/formations.md#scope-filters)
+    - [Soft Delete Filters](https://github.com/headlesslaravel/docs/blob/main/formations.md#soft-delete-filters)
+    - [Filter Helpers](https://github.com/headlesslaravel/docs/blob/main/formations.md#filter-helpers)
+- [Global Search](https://github.com/headlesslaravel/docs/blob/main/formations.md#global-search)
+- [Imports](https://github.com/headlesslaravel/docs/blob/main/formations.md#imports)
 
 ### Usage
 
@@ -403,7 +414,7 @@ Filter::make('only-deleted')->onlyTrashed(),
 /articles?deleted=true
 ```
 
-# Helpers
+## Filter Helpers
 
 Here are some scenarios and recipes:
 
