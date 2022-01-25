@@ -2,18 +2,17 @@
 
 The card component class for dashboards and such.
 
-## Installation
+### Usage
 
-You can install the package via composer:
 
-```bash
-composer require headlesslaravel/cards
-```
 Make a card class to manage multiple cards of one  type:
+
 ```bash
 php artisan make:cards Dashboard
 ```
+
 Then add the class to an endpoint:
+
 ```php
 Route::cards('api/dashboard', Dashboard::class);
 ```
