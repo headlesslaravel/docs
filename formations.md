@@ -2,9 +2,7 @@
 
 Formations combine Laravel features to form functioning API endpoints.
 
-The index endpoint comes with [search, sort & filters](https://github.com/headlesslaravel/formations/wiki/Filters)
-
-Response modes include Inertia, Blade or JSON.
+### Table of contents
 
 - [Routes](https://github.com/headlesslaravel/docs/blob/main/formations.md#routes)
     - [Resource](https://github.com/headlesslaravel/docs/blob/main/formations.md#resource-routes)
