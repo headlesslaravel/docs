@@ -1,14 +1,10 @@
-# Headless Notifications
+# Notifications
 
 Notification Endpoints for Laravel Applications
 
 ---
 
-### Install
-Add the composer package:
-```
-composer require headlesslaravel/notifications
-```
+### Usage
 
 ```php
 Route::notifications();
