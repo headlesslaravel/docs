@@ -1,4 +1,4 @@
-# Headless Metrics
+# Metrics
 
 Compose metrics for cards and such.
 
