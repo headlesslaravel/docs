@@ -8,6 +8,7 @@ Formations combine Laravel features to form functioning API endpoints.
     - [Resource](https://github.com/headlesslaravel/docs/blob/main/formations.md#resource-routes)
     - [Nested Resource](https://github.com/headlesslaravel/docs/blob/main/formations.md#nested-resource-routes)
     - [Pivot](https://github.com/headlesslaravel/docs/blob/main/formations.md#pivot-resource-routes)
+- Fields (TODO)
 - [Filters](https://github.com/headlesslaravel/docs/blob/main/formations.md#filters)
     - [Search](https://github.com/headlesslaravel/docs/blob/main/formations.md#search)
     - [Sort](https://github.com/headlesslaravel/docs/blob/main/formations.md#sort)
