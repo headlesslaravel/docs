@@ -100,7 +100,8 @@ class ArticleFormation extends Formation
 Full resourceful controllers are available including soft delete endpoints.
 
 ```php
-Route::formation(AuthorFormation::class)->resource('articles');
+Route::formation(AuthorFormation::class)
+    ->resource('articles');
 ```
 | Method | Action | Endpoint | Name |
 | --------|--------|----------|-------|
@@ -117,7 +118,8 @@ Route::formation(AuthorFormation::class)->resource('articles');
 ### Nested Resource Routes
 
 ```php
-Route::formation(ArticleFormation::class)->resource('authors.articles');
+Route::formation(ArticleFormation::class)
+    ->resource('authors.articles');
 ```
 | Method | Action | Endpoint | Name |
 | --------|--------|----------|-------|
@@ -134,7 +136,9 @@ Route::formation(ArticleFormation::class)->resource('authors.articles');
 ### Pivot Resource Routes
 
 ```php
-Route::formation(ArticleFormation::class)->resource('authors.articles')->pivot();
+Route::formation(ArticleFormation::class)
+    ->resource('authors.articles')
+    ->asPivot();
 ```
 
 | Method | Action | Endpoint | Name | Description |
@@ -155,6 +159,9 @@ Only `index` will be defined based on this example:
 ```php
 Route::formation(ArticleFormation::class)->only('index');
 ```
+
+---
+
 
 # Filters
 
@@ -564,7 +571,9 @@ Importing models is very easy with formations
 ### Routing
 
 ```php
-Route::formation(ArticleFormation::class)->resource('articles')->import()
+Route::formation(ArticleFormation::class)
+    ->resource('articles')
+    ->asImport()
 ```
 
 | Method | Action | Endpoint | Name | Description |
