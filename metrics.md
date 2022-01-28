@@ -98,5 +98,41 @@ Get the average result column value:
 > What is the average order total?
 
 ```php
-Metric::make(Order::class)->count('total')
+Metric::make(Order::class)->avg('total')
 ```
+
+## Date Ranges
+
+## Conditions
+
+Get more specific with metrics by applying conditions.
+
+#### Manual where clauses
+
+Apply a where condition directory to the metric chain:
+
+```php
+Metric::make(Order::class)
+    ->where('state', 'NY')
+    ->count('total')
+    
+Metric::make(Order::class)
+    ->where('total', '>' '5')
+    ->count('total')
+```
+
+#### Apply Metric Filters
+
+Automatically apply request query parameters using filters:
+
+```php
+Metric::make(Order::class)
+    ->filters([
+        Filter::make('customer')->relation()
+    ])
+```
+
+## Comparisons
+
+## Output Options
+
