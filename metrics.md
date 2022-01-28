@@ -6,7 +6,7 @@ Customize with a robust set of chainable options.
 
 ### Table of contents
 
-- Basic Usuage
+- [Basic Usage](https://github.com/headlesslaravel/docs/blob/main/metrics.md#basic-usage)
 - [Aggregates](https://github.com/headlesslaravel/docs/blob/main/metrics.md#aggregates)
     - [count](https://github.com/headlesslaravel/docs/blob/main/metrics.md#count)
     - [sum](https://github.com/headlesslaravel/docs/blob/main/metrics.md#sum)
