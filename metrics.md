@@ -7,7 +7,7 @@ Customize with a robust set of chainable options.
 ### Table of contents
 
 - Basic Usuage
-- Aggregates
+- [Aggregates](https://github.com/headlesslaravel/docs/blob/main/metrics.md#aggregates)
 - Date Ranges
 - Conditions
     - Manual where clauses
