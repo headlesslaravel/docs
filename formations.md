@@ -20,6 +20,7 @@ Formations combine Laravel features to form functioning API endpoints.
     - [Filter Helpers](https://github.com/headlesslaravel/docs/blob/main/formations.md#filter-helpers)
 - [Global Search](https://github.com/headlesslaravel/docs/blob/main/formations.md#global-search)
 - [Imports](https://github.com/headlesslaravel/docs/blob/main/formations.md#imports)
+- [Exports](https://github.com/headlesslaravel/docs/blob/main/formations.md#exports)
 
 ### Usage
 
@@ -598,8 +599,48 @@ public function import(): array
 }
 ```
 
-### Errors Email
+# Exports
 
-Any rows that fail will be skipped and emailed to you with the validation messages
+Exporting models is very easy with formations
 
-This makes it very easy to re-upload only the failed rows after you correct the errors.
+### Routing
+
+```php
+Route::formation(ArticleFormation::class)
+    ->resource('articles')
+    ->asExport()
+```
+
+| Method | Action | Endpoint | Name | Description |
+| --------|--------|----------|-------|-----------|
+| GET | create | /exports/{resource}| posts.exports.create | Download a export of a formation |
+
+
+### Fields
+
+Lastly, define the accepted fields within your formation:
+
+```php
+public function export(): array
+{
+    return [
+        Field::make('title'),
+        Field::make('body'),
+        Field::make('author', 'author.name'),
+        Field::make('category', 'category.title'),
+    ];
+}
+```
+
+### Parameters
+
+Adding a `?columns=title` will exclude the other columns and only include `title`
+
+Adding any filters defined on the formation will also work:
+
+```php
+Filter::make('author')->relation()
+```
+```
+/exports/posts?columns=title&author=33
+```
