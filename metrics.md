@@ -8,7 +8,14 @@ Customize with a robust set of chainable options.
 
 - Basic Usuage
 - [Aggregates](https://github.com/headlesslaravel/docs/blob/main/metrics.md#aggregates)
+    - [count](https://github.com/headlesslaravel/docs/blob/main/metrics.md#count)
+    - [sum](https://github.com/headlesslaravel/docs/blob/main/metrics.md#sum)
+    - [min](https://github.com/headlesslaravel/docs/blob/main/metrics.md#min)
+    - [max](https://github.com/headlesslaravel/docs/blob/main/metrics.md#max)
+    - [avg](https://github.com/headlesslaravel/docs/blob/main/metrics.md#avg)
 - Date Ranges
+    - from
+    - to  
 - Conditions
     - Manual where clauses
     - Filter class support
