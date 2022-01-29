@@ -14,14 +14,7 @@ Customize with a robust set of chainable options.
     - Manual where clauses
     - Filter class support
 - [Comparisons](https://github.com/headlesslaravel/docs/blob/main/metrics.md#comparisons)
-    -  Period over period
-    -  Percentage
 - Output options
-    - asText
-    - asJson
-    - asCsv
-    - asHtml
-    - asChart
 
 ### Basic Usage
 
@@ -116,6 +109,28 @@ Here are a few common examples:
 ->fromDay()->perHour()
 ```
 
+### Dynamic Intervals
+
+Allow a dropdown to change chart data intervals and refresh the same
+
+```
+/cards/dashboard/total-orders?interval=day
+```
+```php
+Metric::make(Order::class)
+    ->fromMonth()
+    ->perRequestInterval()
+    ->count('total')
+    ->asChart()
+```
+
+Which is short for:
+```php
+Metric::make(Order::class)
+    ->per(Request::input('interval', 'day'))
+    ->count('total')
+```
+
 ## Date Ranges
 
 ## Conditions
@@ -149,5 +164,11 @@ Metric::make(Order::class)
 
 ## Comparisons
 
+
 ## Output Options
 
+#### asText
+#### asJson
+#### asCsv
+#### asHtml
+#### asChart
