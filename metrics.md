@@ -8,13 +8,11 @@ Customize with a robust set of chainable options.
 
 - [Basic Usage](https://github.com/headlesslaravel/docs/blob/main/metrics.md#basic-usage)
 - [Aggregates](https://github.com/headlesslaravel/docs/blob/main/metrics.md#aggregates)
-- [Date Intervals](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-intervals)
 - [Date Ranges](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-ranges)
+- [Date Intervals](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-intervals)
 - [Conditions & filters](https://github.com/headlesslaravel/docs/blob/main/metrics.md#conditions)
-    - Manual where clauses
-    - Filter class support
 - [Comparisons](https://github.com/headlesslaravel/docs/blob/main/metrics.md#comparisons)
-- Output options
+- [Display options](https://github.com/headlesslaravel/docs/blob/main/metrics.md#display)
 
 ### Basic Usage
 
@@ -85,6 +83,8 @@ Get the average result column value:
 Metric::make(Order::class)->avg('total')
 ```
 
+## Date Ranges
+
 ## Date Intervals
 
 When an interval is added to a metric, the results will be per that interval.
@@ -131,8 +131,6 @@ Metric::make(Order::class)
     ->count('total')
 ```
 
-## Date Ranges
-
 ## Conditions
 
 Get more specific with metrics by applying conditions.
@@ -165,7 +163,7 @@ Metric::make(Order::class)
 ## Comparisons
 
 
-## Output Options
+## Display options
 
 #### asText
 #### asJson
