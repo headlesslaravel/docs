@@ -85,6 +85,25 @@ Metric::make(Order::class)->avg('total')
 
 ## Date Ranges
 
+### Dynamic Date Range
+
+Allow a dropdown to change chart data ranges and refresh the same endpoint:
+
+```php
+Metric::make(Order::class)
+    ->fromRequestRange()
+    ->perDay();
+```
+Which is shorthand for:
+
+```php
+Metric::make(Order::class)
+    ->from(Request::input('from', 'month'))
+    ->perDay();
+```
+
+
+
 ## Date Intervals
 
 When an interval is added to a metric, the results will be per that interval.
@@ -114,7 +133,7 @@ Here are a few common examples:
 
 ### Dynamic Intervals
 
-Allow a dropdown to change chart data intervals and refresh the same
+Allow a dropdown to change chart data intervals and refresh the same endpoint:
 
 ```
 /cards/dashboard/total-orders?interval=day
