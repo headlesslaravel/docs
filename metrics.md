@@ -13,6 +13,7 @@ Customize with a robust set of chainable options.
     - [min](https://github.com/headlesslaravel/docs/blob/main/metrics.md#min)
     - [max](https://github.com/headlesslaravel/docs/blob/main/metrics.md#max)
     - [avg](https://github.com/headlesslaravel/docs/blob/main/metrics.md#avg)
+- Date Intervals
 - Date Ranges
     - from
     - to  
@@ -99,6 +100,30 @@ Get the average result column value:
 
 ```php
 Metric::make(Order::class)->avg('total')
+```
+
+## Date Intervals
+
+When an interval is added to a metric, the results will be per that interval.
+
+Metrics can be returned per day, week, month etc.
+
+> What is the average order total per day for the last month?
+```php
+Metric::make(Order::class)
+    ->avg('total')
+    ->fromWeek()
+    ->perDay();
+```
+
+Here are a few common examples:
+
+```php
+->fromYear()->perQuarter()
+->fromQuarter()->perMonth()
+->fromMonth()->perWeek()
+->fromWeek()->perDay()
+->fromDay()->perHour()
 ```
 
 ## Date Ranges
