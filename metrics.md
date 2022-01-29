@@ -102,12 +102,15 @@ Metric::make(Order::class)
 Here are a few common examples:
 
 ```php
-->fromYear()->perQuarter()
-->fromQuarter()->perMonth()
-->fromMonth()->perWeek()
-->fromWeek()->perDay()
-->fromDay()->perHour()
+->fromYear()->perQuarter() // Q1
+->fromQuarter()->perMonth() // January
+->fromMonth()->perWeek() // Week 1
+->fromWeek()->perDay() // Wednesday
+->fromWeek()->perDate() // 1/22
+->fromDay()->perHour() // 1pm
 ```
+
+
 
 ### Dynamic Intervals
 
