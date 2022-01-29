@@ -185,6 +185,25 @@ Metric::make(Order::class)
 ## Comparisons
 
 
+### Compare previous period
+
+> Get this month and previous month's order total
+
+```php
+Metric::make(Order::class)
+    ->fromMonth()
+    ->withPrevious()
+    ->count('total')
+```
+
+```php
+Metric::make(Order::class)
+    ->fromYear()
+    ->perMonth()
+    ->withPrevious()
+    ->count('total')
+```
+
 ## Display options
 
 #### asText
