@@ -8,19 +8,12 @@ Customize with a robust set of chainable options.
 
 - [Basic Usage](https://github.com/headlesslaravel/docs/blob/main/metrics.md#basic-usage)
 - [Aggregates](https://github.com/headlesslaravel/docs/blob/main/metrics.md#aggregates)
-    - [count](https://github.com/headlesslaravel/docs/blob/main/metrics.md#count)
-    - [sum](https://github.com/headlesslaravel/docs/blob/main/metrics.md#sum)
-    - [min](https://github.com/headlesslaravel/docs/blob/main/metrics.md#min)
-    - [max](https://github.com/headlesslaravel/docs/blob/main/metrics.md#max)
-    - [avg](https://github.com/headlesslaravel/docs/blob/main/metrics.md#avg)
-- Date Intervals
-- Date Ranges
-    - from
-    - to  
-- Conditions
+- [Date Intervals](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-intervals)
+- [Date Ranges](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-ranges)
+- [Conditions & filters](https://github.com/headlesslaravel/docs/blob/main/metrics.md#conditions)
     - Manual where clauses
     - Filter class support
-- Comparisons
+- [Comparisons](https://github.com/headlesslaravel/docs/blob/main/metrics.md#comparisons)
     -  Period over period
     -  Percentage
 - Output options
@@ -29,9 +22,6 @@ Customize with a robust set of chainable options.
     - asCsv
     - asHtml
     - asChart
-- Things I don't know about yet
-    - percentages
-    - 
 
 ### Basic Usage
 
@@ -108,7 +98,7 @@ When an interval is added to a metric, the results will be per that interval.
 
 Metrics can be returned per day, week, month etc.
 
-> What is the average order total per day for the last month?
+> What is the average order total per day for the last week?
 ```php
 Metric::make(Order::class)
     ->avg('total')
