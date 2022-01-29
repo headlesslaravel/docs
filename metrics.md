@@ -99,6 +99,7 @@ Which is shorthand for:
 ```php
 Metric::make(Order::class)
     ->from(Request::input('from', 'month'))
+    ->to(Request::input('to', now()))
     ->perDay();
 ```
 
