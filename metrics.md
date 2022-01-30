@@ -205,13 +205,36 @@ Metric::make(Order::class)
     ->withPrevious()
     ->count('total')
 ```
-
+```php
+[
+    'value' => 500,
+    'previous' => 400,
+    'percent' => 20
+]
+```
 ```php
 Metric::make(Order::class)
     ->fromYear()
     ->perMonth()
     ->withPrevious()
     ->count('total')
+```
+
+```php
+[
+    [
+        'label' => 'January'
+        'value' => 500,
+        'previous' => null,
+        'percent' => null
+    ],
+    [
+        'label' => 'February'
+        'value' => 400,
+        'previous' => 500,
+        'percent' => 20
+    ],   
+]
 ```
 
 ## Display options
