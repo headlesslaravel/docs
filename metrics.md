@@ -103,7 +103,17 @@ Metric::make(Order::class)
     ->perDay();
 ```
 
+Here are a list of periods you can set `from` and `to`
 
+| from | to |
+|------|----|
+| fromYear() | toYear() |
+| fromQuarter() | toQuarter() |
+| fromMonth() | toMonth() |
+| fromWeek() | toWeek() |
+| fromDay() | toDay() |
+| fromHour() | toHour() |
+| fromMinute() | toMinute() |
 
 ## Date Intervals
 
@@ -129,7 +139,6 @@ Here are a few common examples:
 ->fromWeek()->perDate() // 1/22
 ->fromDay()->perHour() // 1pm
 ```
-
 
 
 ### Dynamic Intervals
