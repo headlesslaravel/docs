@@ -207,6 +207,7 @@ Metric::make(Order::class)
 ```
 ```php
 [
+    'label' => 'January',
     'value' => 500,
     'previous' => 400,
     'percent' => 20
