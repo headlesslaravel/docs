@@ -115,6 +115,20 @@ Here are a list of periods you can set `from` and `to`
 | fromHour() | toHour() |
 | fromMinute() | toMinute() |
 
+#### Period Increments
+
+Adding an increment to `from` is how many to go back.
+
+```php
+->fromMinute(5) // 5 minutes ago
+```
+
+Adding an increment to `to` is how many to go forward.
+
+```php
+->toYear(5) // 5 years in the future
+```
+
 ## Date Intervals
 
 When an interval is added to a metric, the results will be per that interval.
