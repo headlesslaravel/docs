@@ -10,7 +10,8 @@ Customize with a robust set of chainable options.
 - [Aggregates](https://github.com/headlesslaravel/docs/blob/main/metrics.md#aggregates)
 - [Date Periods](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-periods)
 - [Date Intervals](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-intervals)
-- [Conditions & Filters](https://github.com/headlesslaravel/docs/blob/main/metrics.md#conditions)
+- [Where Conditions](https://github.com/headlesslaravel/docs/blob/main/metrics.md#conditions)
+- [Request Filters](https://github.com/headlesslaravel/docs/blob/main/metrics.md#filters)
 - [Previous Period](https://github.com/headlesslaravel/docs/blob/main/metrics.md#previous-period)
 - [Multiple Metrics](https://github.com/headlesslaravel/docs/blob/main/metrics.md#multiple-metrics)
 - [Display Options](https://github.com/headlesslaravel/docs/blob/main/metrics.md#display)
@@ -180,10 +181,6 @@ Metric::make(Order::class)
 
 ## Conditions
 
-Get more specific with metrics by applying conditions.
-
-#### Manual where clauses
-
 Apply a where condition directory to the metric chain:
 
 ```php
@@ -196,7 +193,7 @@ Metric::make(Order::class)
     ->count('total')
 ```
 
-#### Apply Metric Filters
+## Filters
 
 Automatically apply request query parameters using filters:
 
