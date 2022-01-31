@@ -8,7 +8,7 @@ Customize with a robust set of chainable options.
 
 - [Basic Usage](https://github.com/headlesslaravel/docs/blob/main/metrics.md#basic-usage)
 - [Aggregates](https://github.com/headlesslaravel/docs/blob/main/metrics.md#aggregates)
-- [Date Ranges](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-ranges)
+- [Date Ranges](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-periods)
 - [Date Intervals](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-intervals)
 - [Conditions & filters](https://github.com/headlesslaravel/docs/blob/main/metrics.md#conditions)
 - [Comparisons](https://github.com/headlesslaravel/docs/blob/main/metrics.md#comparisons)
@@ -83,9 +83,9 @@ Get the average result column value:
 Metric::make(Order::class)->avg('total')
 ```
 
-## Date Ranges
+## Date Periods
 
-### Dynamic Date Range
+### Dynamic Periods
 
 Allow a dropdown to change chart data ranges and refresh the same endpoint:
 
