@@ -10,9 +10,10 @@ Customize with a robust set of chainable options.
 - [Aggregates](https://github.com/headlesslaravel/docs/blob/main/metrics.md#aggregates)
 - [Date Periods](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-periods)
 - [Date Intervals](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-intervals)
-- [Conditions & filters](https://github.com/headlesslaravel/docs/blob/main/metrics.md#conditions)
-- [Comparisons](https://github.com/headlesslaravel/docs/blob/main/metrics.md#comparisons)
-- [Display options](https://github.com/headlesslaravel/docs/blob/main/metrics.md#display)
+- [Conditions & Filters](https://github.com/headlesslaravel/docs/blob/main/metrics.md#conditions)
+- [Previous Period](https://github.com/headlesslaravel/docs/blob/main/metrics.md#previous-period)
+- [Multiple Metrics](https://github.com/headlesslaravel/docs/blob/main/metrics.md#multiple-metrics)
+- [Display Options](https://github.com/headlesslaravel/docs/blob/main/metrics.md#display)
 
 ### Basic Usage
 
@@ -206,10 +207,7 @@ Metric::make(Order::class)
     ])
 ```
 
-## Comparisons
-
-
-### Compare previous period
+## Previod Periods
 
 > Get this month and previous month's order total
 
@@ -251,6 +249,9 @@ Metric::make(Order::class)
     ],   
 ]
 ```
+
+## Multiple Metrics
+
 
 ## Display options
 
