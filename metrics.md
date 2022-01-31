@@ -8,7 +8,7 @@ Customize with a robust set of chainable options.
 
 - [Basic Usage](https://github.com/headlesslaravel/docs/blob/main/metrics.md#basic-usage)
 - [Aggregates](https://github.com/headlesslaravel/docs/blob/main/metrics.md#aggregates)
-- [Date Ranges](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-periods)
+- [Date Periods](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-periods)
 - [Date Intervals](https://github.com/headlesslaravel/docs/blob/main/metrics.md#date-intervals)
 - [Conditions & filters](https://github.com/headlesslaravel/docs/blob/main/metrics.md#conditions)
 - [Comparisons](https://github.com/headlesslaravel/docs/blob/main/metrics.md#comparisons)
