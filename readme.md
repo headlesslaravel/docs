@@ -3,6 +3,7 @@
 A set of frontend-less app features ("headless")
 
 - [formations](https://github.com/headlesslaravel/docs/blob/main/formations.md)
+- [finders](https://github.com/headlesslaravel/docs/blob/main/finders.md)
 - [cards](https://github.com/headlesslaravel/docs/blob/main/cards.md)
 - [metrics](https://github.com/headlesslaravel/docs/blob/main/metrics.md)
 - [notifications](https://github.com/headlesslaravel/docs/blob/main/notifications.md)
