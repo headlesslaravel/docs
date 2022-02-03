@@ -1,6 +1,6 @@
 # Formations
 
-Formations combine Laravel features to form functioning API endpoints.
+Formations are the combination of many concepts to form fully featured API endpoints.
 
 ### Table of contents
 
