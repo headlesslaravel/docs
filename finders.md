@@ -1,4 +1,4 @@
-# Finder
+# Finders
 
 Control a model's index results from the url querystring.
 
