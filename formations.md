@@ -34,6 +34,101 @@ Route::formation(ArticleFormation::class);
 Here is the formation located in `App\Http\Formations` with example [search, sort & filters](https://github.com/headlesslaravel/formations/wiki/Filters)
 
 
+```php
+<?php
+
+namespace App\Http\Formations;
+
+class ArticleFormation extends Formation
+{
+     public $model = \App\Models\Article::class;
+     
+     public $display = 'title';
+}
+```
+
+### Search
+
+Enable search query parameters by adding a `search()` method:
+
+```php
+<?php
+
+namespace App\Http\Formations;
+
+class ArticleFormation extends Formation
+{
+    public $model = \App\Models\Article::class;
+     
+    public $display = 'title';
+     
+    public function search(): array
+    {
+        return [
+            Search::make('title'),
+            Search::make('comments.body'),
+        ];
+    }
+}
+```
+
+[Read more about search here](https://github.com/headlesslaravel/docs/blob/main/finders.md#search)
+
+### Sort
+
+Enable sort query parameters by adding a `sort()` method:
+
+```php
+<?php
+
+namespace App\Http\Formations;
+
+class ArticleFormation extends Formation
+{
+    public $model = \App\Models\Article::class;
+     
+    public $display = 'title';
+     
+    public function sort(): array
+    {
+        return [
+            Sort::make('title'),
+            Sort::make('comment_body', 'comments.body'),
+            Sort::make('comments'),
+        ];
+    }
+}
+```
+
+[Read more about sorting here](https://github.com/headlesslaravel/docs/blob/main/finders.md#sort)
+
+### Filters
+
+Enable filter query parameters by adding a `filters()` method:
+
+```php
+<?php
+
+namespace App\Http\Formations;
+
+class ArticleFormation extends Formation
+{
+    public $model = \App\Models\Article::class;
+     
+    public $display = 'title';
+     
+    public function filters(): array
+    {
+        return [
+            Filter::make('active')->boolean(),
+            Filter::make('author')->relation(),
+        ];
+    }
+}
+```
+
+[View full list of filters here](https://github.com/headlesslaravel/docs/blob/main/finders.md#filters)
+
 # Routes
 
 
