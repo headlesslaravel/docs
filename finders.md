@@ -325,8 +325,11 @@ Filter::make('price')->asCents(),
 
 ## Standalone
 
-The above examples are assuming the use of Formations but this package was designed to work with Eloquent models and enables using the same sort, search and filters without any other packages installed.
+The above examples are assuming the use of Formations but this package was designed to work with Eloquent models and enables using the same sort, search and filters without any other packages installed. The following example will use url's query string parameters from the request:
 
+```
+/posts?search=Laravel&sort-desc=upvotes&category=1
+```
 ```php
 Post::query()
     ->search([
@@ -335,7 +338,7 @@ Post::query()
     ])->sort([
         Sort::make('title'),
         Sort::make('comments'),
-        Sort::make('comments.upvotes'),
+        Sort::make('upvotes', 'comments.upvotes'),
     ])->filters([
         Filter::make('category')->relation(),
         Filter::make('author')->relation(),
