@@ -12,7 +12,7 @@ Control a model's index results from the url querystring.
     - [Scopes](https://github.com/headlesslaravel/docs/blob/main/finders.md#scope-filters)
     - [Soft Delete](https://github.com/headlesslaravel/docs/blob/main/finders.md#soft-delete-filters)
     - [Helpers](https://github.com/headlesslaravel/docs/blob/main/finders.md#filter-helpers)
-- Limiting
+- [Standalone](https://github.com/headlesslaravel/docs/blob/main/finders.md#standalone)
 
 # Search
 
@@ -323,4 +323,21 @@ Filter::make('price')->asCents(),
 /products?price=100 // where('price', 10000)
 ```
 
-## Limits
+## Standalone
+
+The above examples are assuming the use of Formations but this package was designed to work with Eloquent models and enables using the same sort, search and filters without any other packages installed.
+
+```php
+Post::query()
+    ->search([
+        Search::make('title'),
+        Search::make('comments.body'),
+    ])->sort([
+        Sort::make('title'),
+        Sort::make('comments'),
+        Sort::make('comments.upvotes'),
+    ])->filters([
+        Filter::make('category')->relation(),
+        Filter::make('author')->relation(),
+        Filter::make('comments')->count(),
+    ])->paginate()
