@@ -22,8 +22,8 @@ Use the key as the `search` query parameter to search columns & relationship col
 public function search(): array
 {
     return [
-      Search::make('title'),
-      Search::make('comments.body'),
+        Search::make('title'),
+        Search::make('comments.body'),
     ];
 }
 ```
@@ -36,9 +36,9 @@ Use the key in `sort` and `sort-desc` query parameters:
 public function sort(): array
 {
     return [
-      Sort::make('title'),
-      Sort::make('comment_body', 'comments.body'),
-      Sort::make('comments'),
+        Sort::make('title'),
+        Sort::make('comment_body', 'comments.body'),
+        Sort::make('comments'),
     ];
 }
 ```
