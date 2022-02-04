@@ -9,15 +9,9 @@ Formations are the combination of many concepts to form fully featured API endpo
     - [Nested Resource](https://github.com/headlesslaravel/docs/blob/main/formations.md#nested-resource-routes)
     - [Pivot](https://github.com/headlesslaravel/docs/blob/main/formations.md#pivot-resource-routes)
 - Fields (TODO)
+- [Search](https://github.com/headlesslaravel/docs/blob/main/formations.md#search)
+- [Sort](https://github.com/headlesslaravel/docs/blob/main/formations.md#sort)
 - [Filters](https://github.com/headlesslaravel/docs/blob/main/formations.md#filters)
-    - [Search](https://github.com/headlesslaravel/docs/blob/main/formations.md#search)
-    - [Sort](https://github.com/headlesslaravel/docs/blob/main/formations.md#sort)
-    - [General Filters](https://github.com/headlesslaravel/docs/blob/main/formations.md#general-filters)
-    - [Relationship Filters](https://github.com/headlesslaravel/docs/blob/main/formations.md#relationship-filters)
-    - [Location Filters](https://github.com/headlesslaravel/docs/blob/main/formations.md#location-filters)
-    - [Scope Filters](https://github.com/headlesslaravel/docs/blob/main/formations.md#scope-filters)
-    - [Soft Delete Filters](https://github.com/headlesslaravel/docs/blob/main/formations.md#soft-delete-filters)
-    - [Filter Helpers](https://github.com/headlesslaravel/docs/blob/main/formations.md#filter-helpers)
 - [Global Search](https://github.com/headlesslaravel/docs/blob/main/formations.md#global-search)
 - [Imports](https://github.com/headlesslaravel/docs/blob/main/formations.md#imports)
 - [Exports](https://github.com/headlesslaravel/docs/blob/main/formations.md#exports)
@@ -39,59 +33,6 @@ Route::formation(ArticleFormation::class);
 ```
 Here is the formation located in `App\Http\Formations` with example [search, sort & filters](https://github.com/headlesslaravel/formations/wiki/Filters)
 
-```php
-<?php
-
-namespace App\Http\Formations;
-
-use HeadlessLaravel\Formation\Filter;
-use HeadlessLaravel\Formation\Formation;
-
-class ArticleFormation extends Formation
-{
-    /**
-     * The model class,
-     *
-     * @var string
-     */
-    public $model = \App\Models\Article::class;
-    
-    /**
-     * The column to use for select options,
-     *
-     * @var string
-     */
-    public $display = 'title';
-    
-    /**
-     * The searchable columns,
-     *
-     * @var array
-     */
-    public $search = ['title', 'comments.body'];
-
-    /**
-     * The sortable columns.
-     *
-     * @var array
-     */
-    public $sort = ['created_at', 'comments'];
-
-    /**
-     * Define the filters.
-     *
-     * @return array
-     */
-    public function filters():array
-    {
-        return [
-            Filter::make('author')->related(),
-            Filter::make('published_at')->dateRange(),
-            Filter::make('comments')->countRange(),
-        ];
-    }
-}
-```
 
 # Routes
 
