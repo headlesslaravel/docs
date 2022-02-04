@@ -3,9 +3,15 @@
 Control a model's index results from the url querystring.
 
 ### Table of contents
-- Searching
-- Sorting
-- Filtering
+- [Search](https://github.com/headlesslaravel/docs/blob/main/finders.md#search)
+- [Sort](https://github.com/headlesslaravel/docs/blob/main/finders.md#sort)
+- [Filters](https://github.com/headlesslaravel/docs/blob/main/finders.md#filters)
+    - [General](https://github.com/headlesslaravel/docs/blob/main/finders.md#general-filters)
+    - [Relationships](https://github.com/headlesslaravel/docs/blob/main/finders.md#relationship-filters)
+    - [Location](https://github.com/headlesslaravel/docs/blob/main/finders.md#location-filters)
+    - [Scopes](https://github.com/headlesslaravel/docs/blob/main/finders.md#scope-filters)
+    - [Soft Delete](https://github.com/headlesslaravel/docs/blob/main/finders.md#soft-delete-filters)
+    - [Helpers](https://github.com/headlesslaravel/docs/blob/main/finders.md#filter-helpers)
 - Limiting
 
 # Search
