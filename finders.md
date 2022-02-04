@@ -327,6 +327,16 @@ Filter::make('price')->asCents(),
 
 The above examples are assuming the use of Formations but this package was designed to work with Eloquent models and enables using the same sort, search and filters without any other packages installed. The following example will use url's query string parameters from the request:
 
+```php
+<?php
+
+use HeadlessLaravel\Finders\Traits\Findable;
+
+class Post extends Model
+{
+    use Findable;
+}
+```
 ```
 /posts?search=Laravel&sort-desc=upvotes&category=1
 ```
