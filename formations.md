@@ -142,7 +142,7 @@ Route::formation(AuthorFormation::class)
 ```
 | Method | Action | Endpoint | Name |
 | --------|--------|----------|-------|
-| GET | index | /authors/ | authors.index |
+| GET | index | /authors | authors.index |
 | GET | show | /authors/1 | authors.show |
 | GET | create | /authors/new | authors.create | 
 | POST | store | /authors/new | authors.store | 
@@ -173,19 +173,19 @@ Route::formation(ArticleFormation::class)
 ### Pivot Resource Routes
 
 ```php
-Route::formation(ArticleFormation::class)
-    ->resource('authors.articles')
+Route::formation(TagFormation::class)
+    ->resource('articles.tags')
     ->asPivot();
 ```
 
 | Method | Action | Endpoint | Name | Description |
 | --------|--------|----------|-------|-------------|
-| GET | index | /posts/1/tags | posts.tags.index | List all tags of a post |
-| GET | show | /posts/1/tags/1 | posts.tags.show | Show single tag of a post |
-| POST | sync | /posts/1/tags/sync | posts.tags.sync | Accepts `selected` array of tags to sync  |
-| POST | toggle | /posts/1/tags/toggle | posts.tags.toggle | Accepts `selected` array of tags to toggle |
-| POST | attach | /posts/1/tags/attach | posts.tags.attach | Accepts `selected` array of tags to attach |
-| DELETE | detach | /posts/1/tags/detach | posts.tags.detach | Accepts `selected` array of tags to detach |
+| GET | index | /articles/1/tags | articles.tags.index | List all tags of a post |
+| GET | show | /articles/1/tags/1 | articles.tags.show | Show single tag of a post |
+| POST | sync | /articles/1/tags/sync | articles.tags.sync | Accepts `selected` array of tags to sync  |
+| POST | toggle | /articles/1/tags/toggle | articles.tags.toggle | Accepts `selected` array of tags to toggle |
+| POST | attach | /articles/1/tags/attach | articles.tags.attach | Accepts `selected` array of tags to attach |
+| DELETE | detach | /articles/1/tags/detach | articles.tags.detach | Accepts `selected` array of tags to detach |
 
 ### Specific Routes
 
